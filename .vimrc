@@ -21,6 +21,7 @@ Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'pangloss/vim-javascript'
 Plugin 'nsf/gocode', {'rtp': 'nvim/'}
 Plugin 'Shougo/vimproc'
 Plugin 'Shougo/unite.vim'
@@ -28,6 +29,8 @@ Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-sensible'
 Plugin 'gabrielelana/vim-markdown'
 Plugin 'vim-scripts/dbext.vim'
+Plugin 'posva/vim-vue'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -62,8 +65,13 @@ au BufNewFile,BufRead *.py setlocal
      \ autoindent
      \ fileformat=unix
 " JS. CSS. HTML
-
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 au BufNewFile,BufRead *.js,*css,*.html setlocal
+     \ tabstop=2
+     \ softtabstop=2
+     \ shiftwidth=2
+     \ expandtab
+autocmd BufRead,BufNewFile *.vue setlocal
      \ tabstop=2
      \ softtabstop=2
      \ shiftwidth=2
@@ -103,8 +111,8 @@ let g:syntastic_enable_signs = 1
 let g:syntastic_enable_balloons = 1
 let g:syntastic_enable_highlighting = 1
 
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 let g:deoplete#enable_at_startup = 1
 " Python settings
