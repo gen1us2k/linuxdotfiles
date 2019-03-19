@@ -40,6 +40,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 bindsym Print exec scrot -e 'mv $f ~/Desktop'
+bindsym XF86Display exec --no-startup-id ~/.config/i3/mon-toggle
 #bindsym $mod+Shift+4 exec scrot -s
 
 
@@ -186,7 +187,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color     
 # finds out, if available)
 bar {
         # tray_output primary
-        status_command i3status # Default option
+        status_command i3status -c ~/.config/i3/i3status # Default option
         # status_command i3blocks -c ~/.i3/i3blocks.conf # Optional
         colors {
                 background $bg-color
@@ -249,3 +250,4 @@ exec /usr/bin/skypeforlinux
 exec --no-startup-id pasystray
 exec --no-startup-id redshift-gtk
 exec --no-startup-id caffeine
+exec --no-startup-id dockd --daemon
