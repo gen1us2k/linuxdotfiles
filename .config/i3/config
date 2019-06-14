@@ -245,8 +245,8 @@ exec --no-startup-id xautolock -time 1 -locker "i3lock -i ~/.lock.png"
 exec --no-startup-id blueman-applet
 exec /usr/bin/telegram-desktop
 exec /usr/bin/google-chrome-stable
-exec /usr/bin/slack
-exec /usr/bin/skypeforlinux
+exec /var/lib/snapd/snap/bin/skype
+exec /var/lib/snapd/snap/bin/slack
 exec --no-startup-id pasystray
 exec --no-startup-id redshift-gtk
 exec --no-startup-id caffeine

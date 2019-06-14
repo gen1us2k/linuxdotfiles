@@ -1,2 +1,2 @@
-ixrandr -dpi 180
+ixrandr -dpi 140
 exec i3
